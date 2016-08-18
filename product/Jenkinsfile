@@ -1,0 +1,18 @@
+node {
+  stage 'Checkout'
+  // git url: 'https://github.com/...''
+
+  stage 'Build the build container image'
+  // def image = docker.build()
+
+  stage 'Build the product'
+  // docker.image('maven:3.3.3-jdk-8').inside {
+  //   git '…your-sources…'
+  //   sh 'mvn -B clean install'
+  // }
+
+  stage 'Build an image of the product'
+
+  stage 'Run an image of the product'
+
+}
