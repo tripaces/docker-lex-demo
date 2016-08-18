@@ -1,8 +1,6 @@
 * Using Docker for CI/CD/DevOps
 
 * Jenkins setup
-** Temp password
-8d621de782124a059b72382967ae6599
 ** Extra plugins
 CloudBees Docker Pipeline
 ** Documentation

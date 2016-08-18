@@ -1,0 +1,18 @@
+node {
+  stage 'Checkout'
+  git url: 'https://github.com/tripaces/docker-lex-demo.git'
+
+  stage 'Build the build container image'
+  def tagid = "localhost:5000/myproj:${env.BUILD_NUMBER}"
+  def image = docker.build tagid, 'product/pipeline'
+
+  stage 'Build the product'
+  docker.image(tagid).inside {
+    //    git '…your-sources…'
+    sh 'echo Hello from inside the built container'
+  }
+
+  stage 'Build an image of the product'
+
+  stage 'Run an image of the product'
+}
